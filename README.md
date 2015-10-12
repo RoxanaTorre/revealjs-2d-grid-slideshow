@@ -3,7 +3,7 @@
 This repository contains a snapshot of our in-progress work to enable
 navigation of a 2D grid slideshow based on Reveal.js.
 
-Please see detail below on context, requirements and workflow for collaborators.
+Please see details below about context, requirements and workflow for collaborators.
 
 ## General information about the website
 
