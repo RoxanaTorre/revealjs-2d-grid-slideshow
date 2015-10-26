@@ -1791,9 +1791,14 @@
 			slideWidth = -slideWidth;
 		}
 
+		var horizontalSlides = toArray( dom.wrapper.querySelectorAll( HORIZONTAL_SLIDES_SELECTOR ) );
+		var h = horizontalSlides.length;
+		var horizontalSlideCount = horizontalSlides.length;
+		console.log('horizontalSlideCount:',horizontalSlideCount)
+
 		transformSlides( {
 			overview: [
-				'translateX('+ ( -indexh * slideWidth ) +'px)',
+				'translateX('+ ( -horizontalSlideCount/2 * slideWidth  + slideWidth/2) +'px)', 
 				'translateY('+ ( -indexv * slideHeight ) +'px)',
 				'translateZ('+ ( window.innerWidth < 400 ? -1000 : -2500 ) +'px)'
 			].join( ' ' )
