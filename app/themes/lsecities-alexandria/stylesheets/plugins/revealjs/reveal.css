@@ -148,12 +148,13 @@ body {
  *********************************************/
 .reveal .controls {
   display: none;
-  position: fixed;
-  width: 110px;
-  height: 110px;
+  position: absolute;
   z-index: 30;
-  right: 10px;
-  bottom: 10px;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  pointer-events:none;
   -webkit-user-select: none; }
 
 .reveal .controls div {
@@ -177,7 +178,7 @@ body {
   margin-top: 1px; }
 
 .reveal .controls div.navigate-left {
-  top: 42px;
+  pointer-events:auto;
   border-right-width: 22px;
   border-right-color: #000; }
 
@@ -185,8 +186,7 @@ body {
   opacity: 0.3; }
 
 .reveal .controls div.navigate-right {
-  left: 74px;
-  top: 42px;
+  pointer-events:auto;
   border-left-width: 22px;
   border-left-color: #000; }
 
@@ -194,7 +194,7 @@ body {
   opacity: 0.3; }
 
 .reveal .controls div.navigate-up {
-  left: 42px;
+  pointer-events:auto;
   border-bottom-width: 22px;
   border-bottom-color: #000; }
 
@@ -202,8 +202,7 @@ body {
   opacity: 0.3; }
 
 .reveal .controls div.navigate-down {
-  left: 42px;
-  top: 74px;
+  pointer-events:auto;
   border-top-width: 22px;
   border-top-color: #000; }
 

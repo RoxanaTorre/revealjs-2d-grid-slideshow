@@ -295,7 +295,6 @@ var usernoiseButton = {"text":"Feedback","style":"background-color: #ff0000; col
 </section></div>
 </div>
 </article>
-
 <script>
 Reveal.initialize({
   width: 1140,
@@ -308,6 +307,15 @@ Reveal.initialize({
   embedded: true
 });
 Reveal.toggleOverview();
+
+var wrapperWidth =  jQuery('.controls').width();
+var wrapperHeight =  jQuery('.controls').height();
+
+jQuery(".navigate-left").css('top',wrapperHeight/2).css('left',30);
+jQuery(".navigate-right").css('top',wrapperHeight/2).css('right',30);
+jQuery(".navigate-up").css('top',0).css('left',wrapperWidth/2);
+jQuery(".navigate-down").css('bottom',0).css('left',wrapperWidth/2);
+
 </script>
 
 <div class="wireframe threecol last" id="navigationarea">
