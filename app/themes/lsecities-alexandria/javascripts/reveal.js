@@ -1792,13 +1792,12 @@
 		}
 
 		var horizontalSlides = toArray( dom.wrapper.querySelectorAll( HORIZONTAL_SLIDES_SELECTOR ) );
-		var h = horizontalSlides.length;
 		var horizontalSlideCount = horizontalSlides.length;
-
+		
 		transformSlides( {
 			overview: [
 				'translateX('+ ( -horizontalSlideCount/2 * slideWidth  + slideWidth/2) +'px)', 
-				'translateY('+ ( -indexv * slideHeight ) +'px)',
+				'translateY('+ ( -(indexv+2) * config.height) +'px)',
 				'translateZ('+ ( window.innerWidth < 400 ? -1000 : -2500 ) +'px)'
 			].join( ' ' )
 		} );
