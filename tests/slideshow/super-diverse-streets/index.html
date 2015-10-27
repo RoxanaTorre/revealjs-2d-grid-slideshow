@@ -38,6 +38,15 @@ img.emoji {
 	background: none !important;
 	padding: 0 !important;
 }
+.intro{
+	position:absolute;
+	top:0;
+	left:0;
+	height: auto;
+	z-index:100;
+	background:#FFF;
+}
+
 </style>
 <link rel='stylesheet' id='revealjs-css'  href='../../../app/themes/lsecities-alexandria/stylesheets/plugins/revealjs/reveal.css' type='text/css' media='all' />
 <link rel='stylesheet' id='revealjs-theme-solarized-css'  href='../../../app/themes/lsecities-alexandria/stylesheets/plugins/revealjs/css/white.css' type='text/css' media='all' />
@@ -156,10 +165,49 @@ var usernoiseButton = {"text":"Feedback","style":"background-color: #ff0000; col
 
 	<div id="main" class="row">
 
+
 <div role="main">
 
 
 <article id="post-10287" class="lc-article layout-2d-revealjs post-10287 post type-post status-publish format-standard hentry category-lse-cities category-ordinary-streets category-super-diverse-streets">
+	<div class="intro ninecol">
+		<h2>Phase 1 ‘Super-diverse streets’ survey comparisons (2015)</h2>
+		<p>The ‘Super-diverse streets’ project is an ESRC-funded research exploration of the intersections
+		between city streets, social diversity and economic adaptations in the context of accelerated
+		migration (ref: ES/L009560/1). The research is based on a comparative analysis across UK cities
+		and aims to explore how urban retail economies and spaces are shaped by and shape migrant
+		practices. The first phase of this project incorporates a qualitative survey conducted in 2015, and
+		focuses on four ‘super-diverse’ high streets: Rookery Road (Birmingham); Stapleton Road (Bristol);
+		Narborough Road (Leicester); and Cheetham Hill (Manchester). Each street was selected through
+		its location in an ethnically-diverse as well as comparatively deprived urban locale. Furthermore,
+		Birmingham, Bristol, Leicester and Manchester are amongst the cities that have the highest
+		percentage of ‘country of birth’ citizens from outside of the UK, after London. In total, the face-toface
+		surveys across four streets incorporate 910 units, 596 retail unit, 68 vacant units, and 351
+		surveyed proprietors. The data incorporated on this website includes the core of our survey in both
+		tabular and graphic form. The purpose is to provide an overview briefing of the survey data itself.
+		Analytic perspectives of how and why migrant proprietors arrive on these specific streets, and how
+		and why their shops both flourish and fail is developed in further papers. Our aim in disseminating
+		these comparative data sets is to provide detailed insights to inform debates and policy around:</p>
+		<ul>
+			<li>the future of ‘British’ high streets;</li>
+			<li>ethnic minority and/or migrant enterprise; and</li>
+			<li>the role of historic and contemporary migrations in shaping cities and streets across the UK.</li>
+		</ul>
+		<p>The survey of these four streets was conducted by Suzanne Hall, Robin Finlay and Julia King.</p>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+		<div class="reveal-link"><a href="#">See research results</a></div>
+	<br>
+	<br>
+	<br>
+  </div>
+<div class="ninecol">
+
   <div class="reveal">
   <div class="slides"><section>
   <h2>Birmingham</h2>
@@ -294,27 +342,51 @@ var usernoiseButton = {"text":"Feedback","style":"background-color: #ff0000; col
   </section>
 </section></div>
 </div>
+</div>
+
 </article>
+<div id="navigationarea" class="threecol last">
+	<nav id="publication-side-toc">
+		<div>
+			<h1>‘Super-diverse streets’ survey comparisons (2015) </h1>
+			<ul>
+				<li><a href="#" class="intro-link">Project description</a></li>
+				<li><a href="#" class="reveal-link">Results phase 1</a></li>
+			</ul>
+		</div>
+	</nav>
+</div>
+
 <script>
+var width = 844;
+var height = 700;
+
 Reveal.initialize({
-  width: 1140,
-  height: 960,
+  width: width,
+  height: height,
   center: false,
   controls: true,
   progress: false,
   history: true,
   transition: 'slide',
+  backgroundTransition:'none',
+  minScale: 0.5,
+  maxScale:0.8,
   embedded: true
 });
 Reveal.toggleOverview();
 
-var wrapperWidth =  jQuery('.controls').width();
-var wrapperHeight =  jQuery('.controls').height();
+jQuery(".navigate-left").css('top',height/2).css('left',30);
+jQuery(".navigate-right").css('top',height/2).css('right',30);
+jQuery(".navigate-up").css('top',0).css('left',width/2);
+jQuery(".navigate-down").css('bottom',0).css('left',width/2);
 
-jQuery(".navigate-left").css('top',wrapperHeight/2).css('left',30);
-jQuery(".navigate-right").css('top',wrapperHeight/2).css('right',30);
-jQuery(".navigate-up").css('top',0).css('left',wrapperWidth/2);
-jQuery(".navigate-down").css('bottom',0).css('left',wrapperWidth/2);
+jQuery('.reveal-link').click(function(){
+	jQuery(".intro").fadeOut(1000);
+});
+jQuery('.intro-link').click(function(){
+	jQuery(".intro").fadeIn(1000);
+});
 
 </script>
 

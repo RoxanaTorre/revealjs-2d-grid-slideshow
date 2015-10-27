@@ -1794,7 +1794,6 @@
 		var horizontalSlides = toArray( dom.wrapper.querySelectorAll( HORIZONTAL_SLIDES_SELECTOR ) );
 		var h = horizontalSlides.length;
 		var horizontalSlideCount = horizontalSlides.length;
-		console.log('horizontalSlideCount:',horizontalSlideCount)
 
 		transformSlides( {
 			overview: [
