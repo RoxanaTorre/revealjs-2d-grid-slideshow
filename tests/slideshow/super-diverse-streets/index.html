@@ -46,6 +46,13 @@ img.emoji {
 	z-index:100;
 	background:#FFF;
 }
+.back{
+	position:absolute;
+	top:10px;
+	left:10px;
+	z-index: 50;
+	cursor:pointer;
+}
 
 </style>
 <link rel='stylesheet' id='revealjs-css'  href='../../../app/themes/lsecities-alexandria/stylesheets/plugins/revealjs/reveal.css' type='text/css' media='all' />
@@ -170,6 +177,7 @@ var usernoiseButton = {"text":"Feedback","style":"background-color: #ff0000; col
 
 
 <article id="post-10287" class="lc-article layout-2d-revealjs post-10287 post type-post status-publish format-standard hentry category-lse-cities category-ordinary-streets category-super-diverse-streets">
+	<div class="back">toggle overview</div>
 	<div class="intro ninecol">
 		<h2>Phase 1 ‘Super-diverse streets’ survey comparisons (2015)</h2>
 		<p>The ‘Super-diverse streets’ project is an ESRC-funded research exploration of the intersections
@@ -388,6 +396,9 @@ jQuery('.intro-link').click(function(){
 	jQuery(".intro").fadeIn(1000);
 });
 
+jQuery('.back').click(function(){
+	Reveal.toggleOverview();
+});
 </script>
 
 <div class="wireframe threecol last" id="navigationarea">

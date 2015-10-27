@@ -887,8 +887,9 @@ body {
     -moz-box-sizing: border-box;
          box-sizing: border-box; }
   .reveal.overview .slides section:hover, .reveal.overview .slides section.present {
-    outline: 10px solid rgba(150, 150, 150, 0.4);
-    outline-offset: 10px; }
+    outline: 10px solid rgba(150, 150, 150, 1);
+    outline-offset: 10px; 
+    background: #ccc;}
   .reveal.overview .slides section .fragment {
     opacity: 1;
     -webkit-transition: none;
