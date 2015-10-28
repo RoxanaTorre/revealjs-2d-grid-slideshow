@@ -1691,6 +1691,8 @@
 		// Only proceed if enabled in config
 		if( config.overview && !isOverview() ) {
 
+			document.getElementById('back').innerHTML= 'view current slide'; //used for interface 
+
 			overview = true;
 
 			dom.wrapper.classList.add( 'overview' );
@@ -1812,6 +1814,8 @@
 
 		// Only proceed if enabled in config
 		if( config.overview ) {
+
+			document.getElementById('back').innerHTML = 'back to overview'; // used for interface
 
 			overview = false;
 

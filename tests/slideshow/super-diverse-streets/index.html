@@ -45,14 +45,16 @@ img.emoji {
 	height: 1000px;
 	z-index:100;
 	background:#FFF;
-	display: none; /* only for testing */
+	/*display: none;  only for testing */
 }
-.back{
-	position:absolute;
-	top:10px;
-	left:10px;
-	z-index: 50;
+#back{
+	background: #FC0D1D;
+	color: #FFFFFF;
 	cursor:pointer;
+	padding:5px 15px;
+	margin-top: 20px;
+	border:0;
+	display: none;
 }
 
 </style>
@@ -178,7 +180,6 @@ var usernoiseButton = {"text":"Feedback","style":"background-color: #ff0000; col
 
 
 <article id="post-10287" class="lc-article layout-2d-revealjs post-10287 post type-post status-publish format-standard hentry category-lse-cities category-ordinary-streets category-super-diverse-streets">
-	<div class="back">toggle overview</div>
 	<div class="intro ninecol">
 		<h2>Phase 1 ‘Super-diverse streets’ survey comparisons (2015)</h2>
 		<p>The ‘Super-diverse streets’ project is an ESRC-funded research exploration of the intersections
@@ -362,6 +363,7 @@ var usernoiseButton = {"text":"Feedback","style":"background-color: #ff0000; col
 				<li><a href="#" class="intro-link">Project description</a></li>
 				<li><a href="#" class="reveal-link">Results phase 1</a></li>
 			</ul>
+			<button id="back">view slide</button>			
 		</div>
 	</nav>
 </div>
@@ -393,14 +395,15 @@ jQuery(".navigate-down").css('bottom',0).css('left',width/2 - navTrans);
 
 jQuery('.reveal-link').click(function(){
 	jQuery(".intro").fadeOut(1000);
+	jQuery("#back").fadeIn(1000);
 });
 jQuery('.intro-link').click(function(){
 	jQuery(".intro").fadeIn(1000);
+	jQuery('#back').fadeOut(1000);
 });
 
-jQuery('.back').click(function(){
-	Reveal.toggleOverview();
-});
+jQuery('#back').click(Reveal.toggleOverview)
+
 </script>
 
 <div class="wireframe threecol last" id="navigationarea">
