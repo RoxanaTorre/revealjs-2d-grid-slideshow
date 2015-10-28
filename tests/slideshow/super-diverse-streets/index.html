@@ -45,6 +45,7 @@ img.emoji {
 	height: 1000px;
 	z-index:100;
 	background:#FFF;
+	display: none; /* only for testing */
 }
 .back{
 	position:absolute;
@@ -383,11 +384,12 @@ Reveal.initialize({
   embedded: true
 });
 Reveal.toggleOverview();
-
-jQuery(".navigate-left").css('top',height/2).css('left',30);
-jQuery(".navigate-right").css('top',height/2).css('right',30);
-jQuery(".navigate-up").css('top',0).css('left',width/2);
-jQuery(".navigate-down").css('bottom',0).css('left',width/2);
+var navSize = 50;
+var navTrans = navSize/2;
+jQuery(".navigate-left").css('top',height/2 - navTrans).css('left',0);
+jQuery(".navigate-right").css('top',height/2 - navTrans).css('right',0);
+jQuery(".navigate-up").css('top',0).css('left',width/2 - navTrans);
+jQuery(".navigate-down").css('bottom',0).css('left',width/2 - navTrans);
 
 jQuery('.reveal-link').click(function(){
 	jQuery(".intro").fadeOut(1000);

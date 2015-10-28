@@ -159,55 +159,46 @@ body {
 
 .reveal .controls div {
   position: absolute;
+  pointer-events:auto;
   opacity: 0.05;
-  width: 0;
-  height: 0;
-  border: 12px solid transparent;
-  -webkit-transform: scale(0.9999);
+  width: 50px;
+  height:50px;
+  border-radius: 50px;
+  background: #EEEEEE;
+  text-align: center;
+ /* -webkit-transform: scale(0.9999);
       -ms-transform: scale(0.9999);
-          transform: scale(0.9999);
+          transform: scale(0.9999);*/
   -webkit-transition: all 0.2s ease;
           transition: all 0.2s ease;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+.reveal .controls div:hover{
+	background: #ccc;
+}
+.reveal .controls div i {
+	font-size: 22px;
+	line-height: 54px;
+}
 
 .reveal .controls div.enabled {
   opacity: 0.7;
   cursor: pointer; }
 
-.reveal .controls div.enabled:active {
-  margin-top: 1px; }
+/*.reveal .controls div.enabled:active {
+  margin-top: 1px; }*/
 
-.reveal .controls div.navigate-left {
-  pointer-events:auto;
-  border-right-width: 22px;
-  border-right-color: #000; }
+.reveal .controls div.navigate-left i{
+	padding-right: 5px ;
+}
 
-.reveal .controls div.navigate-left.fragmented {
-  opacity: 0.3; }
+.reveal .controls div.navigate-right i{
+	padding-left: 5px ;
+ }
 
-.reveal .controls div.navigate-right {
-  pointer-events:auto;
-  border-left-width: 22px;
-  border-left-color: #000; }
-
-.reveal .controls div.navigate-right.fragmented {
-  opacity: 0.3; }
-
-.reveal .controls div.navigate-up {
-  pointer-events:auto;
-  border-bottom-width: 22px;
-  border-bottom-color: #000; }
-
-.reveal .controls div.navigate-up.fragmented {
-  opacity: 0.3; }
-
-.reveal .controls div.navigate-down {
-  pointer-events:auto;
-  border-top-width: 22px;
-  border-top-color: #000; }
-
-.reveal .controls div.navigate-down.fragmented {
-  opacity: 0.3; }
+.reveal .controls div.navigate-up i{
+	line-height: 50px;
+ }
 
 /*********************************************
  * PROGRESS BAR

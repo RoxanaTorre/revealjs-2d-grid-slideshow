@@ -457,10 +457,10 @@
 
 		// Arrow controls
 		createSingletonNode( dom.wrapper, 'aside', 'controls',
-			'<div class="navigate-left"></div>' +
-			'<div class="navigate-right"></div>' +
-			'<div class="navigate-up"></div>' +
-			'<div class="navigate-down"></div>' );
+			'<div class="navigate-left"><i class="icon-left-open"></i></div>' +
+			'<div class="navigate-right"><i class="icon-right-open"></i></div>' +
+			'<div class="navigate-up"><i class="icon-up-open"></i></div>' +
+			'<div class="navigate-down"><i class="icon-down-open"></i></div>' );
 
 		// Slide number
 		dom.slideNumber = createSingletonNode( dom.wrapper, 'div', 'slide-number', '' );
