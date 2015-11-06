@@ -457,10 +457,10 @@
 
 		// Arrow controls
 		createSingletonNode( dom.wrapper, 'aside', 'controls',
-			'<div class="navigate-left"></div>' +
-			'<div class="navigate-right"></div>' +
-			'<div class="navigate-up"></div>' +
-			'<div class="navigate-down"></div>' );
+			'<div class="navigate-left"><i class="icon-left-open"></i></div>' +
+			'<div class="navigate-right"><i class="icon-right-open"></i></div>' +
+			'<div class="navigate-up"><i class="icon-up-open"></i></div>' +
+			'<div class="navigate-down"><i class="icon-down-open"></i></div>' );
 
 		// Slide number
 		dom.slideNumber = createSingletonNode( dom.wrapper, 'div', 'slide-number', '' );
@@ -1691,6 +1691,8 @@
 		// Only proceed if enabled in config
 		if( config.overview && !isOverview() ) {
 
+			document.getElementById('back').innerHTML= 'view current slide'; //used for interface 
+
 			overview = true;
 
 			dom.wrapper.classList.add( 'overview' );
@@ -1791,10 +1793,13 @@
 			slideWidth = -slideWidth;
 		}
 
+		var horizontalSlides = toArray( dom.wrapper.querySelectorAll( HORIZONTAL_SLIDES_SELECTOR ) );
+		var horizontalSlideCount = horizontalSlides.length;
+		
 		transformSlides( {
 			overview: [
-				'translateX('+ ( -indexh * slideWidth ) +'px)',
-				'translateY('+ ( -indexv * slideHeight ) +'px)',
+				'translateX('+ ( -horizontalSlideCount/2 * slideWidth  + slideWidth/2) +'px)', 
+				'translateY('+ ( -(indexv+2) * config.height) +'px)',
 				'translateZ('+ ( window.innerWidth < 400 ? -1000 : -2500 ) +'px)'
 			].join( ' ' )
 		} );
@@ -1809,6 +1814,8 @@
 
 		// Only proceed if enabled in config
 		if( config.overview ) {
+
+			document.getElementById('back').innerHTML = 'back to overview'; // used for interface
 
 			overview = false;
 

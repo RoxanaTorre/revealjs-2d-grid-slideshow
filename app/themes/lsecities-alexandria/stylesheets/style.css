@@ -1031,7 +1031,7 @@ nav#projectsmenu h1 { font-size: 1.2em; font-weight: bold; margin-bottom: 0.5em;
 
 body.pod-page-tests-slideshow-w { overflow: auto; }
 
-article.layout-2d-revealjs .reveal { min-height: 600px; }
+article.layout-2d-revealjs .reveal { min-height: 700px; }
 
 /** MONKEYPATCH - while we investigate why WP decided to override this all of a sudden */
 body.ec2012.custom-background { background-color: black !important; }
