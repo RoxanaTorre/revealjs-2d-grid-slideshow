@@ -2410,21 +2410,21 @@
 					verticalSlidesLength = verticalSlides.length;
 
 				// Determine how far away this slide is from the present
-				distanceX = Math.abs( ( indexh || 0 ) - x ) || 0;
+				//distanceX = Math.abs( ( indexh || 0 ) - x ) || 0;
 
 				// If the presentation is looped, distance should measure
 				// 1 between the first and last slides
-				if( config.loop ) {
+				/*if( config.loop ) {
 					distanceX = Math.abs( ( ( indexh || 0 ) - x ) % ( horizontalSlidesLength - viewDistance ) ) || 0;
-				}
+				}*/
 
 				// Show the horizontal slide if it's within the view distance
-				if( distanceX < viewDistance ) {
+				//if( distanceX < viewDistance ) {
 					showSlide( horizontalSlide );
-				}
+				/*}
 				else {
 					hideSlide( horizontalSlide );
-				}
+				}*/
 
 				if( verticalSlidesLength ) {
 
@@ -2433,14 +2433,14 @@
 					for( var y = 0; y < verticalSlidesLength; y++ ) {
 						var verticalSlide = verticalSlides[y];
 
-						distanceY = x === ( indexh || 0 ) ? Math.abs( ( indexv || 0 ) - y ) : Math.abs( y - oy );
+						//distanceY = x === ( indexh || 0 ) ? Math.abs( ( indexv || 0 ) - y ) : Math.abs( y - oy );
 
-						if( distanceX + distanceY < viewDistance ) {
+						//if( distanceX + distanceY < viewDistance ) {
 							showSlide( verticalSlide );
-						}
+						/*}
 						else {
 							hideSlide( verticalSlide );
-						}
+						}*/
 					}
 
 				}
