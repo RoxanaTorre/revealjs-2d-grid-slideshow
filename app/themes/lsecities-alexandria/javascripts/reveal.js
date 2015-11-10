@@ -2391,7 +2391,7 @@
 
 			// The number of steps away from the present slide that will
 			// be visible
-			var viewDistance = isOverview() ? 10 : config.viewDistance;
+			var viewDistance = isOverview() ? 20 : config.viewDistance;
 
 			// Limit view distance on weaker devices
 			if( isMobileDevice ) {
